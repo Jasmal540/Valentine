@@ -82,6 +82,14 @@ function yesClick() {
     `;
 }
 
+    function yesClick() {
+    const phoneNumber = "9715XXXXXXXX"; // 👉 PUT YOUR NUMBER WITH COUNTRY CODE
+    const message = "She said YES ❤️💘";
+    const url = "https://wa.me/" + 971509088041 + "?text=" + encodeURIComponent(message);
+    window.location.href = url;
+}
+
+    
 function moveNo() {
     const btn = document.getElementById("noBtn");
     btn.style.left = Math.random() * 80 + "vw";
@@ -91,4 +99,5 @@ function moveNo() {
 
 </body>
 </html>
+
 
