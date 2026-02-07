@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 💘</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: 
+            linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+            url("WhatsApp Image 2026-02-07 at 11.40.24 AM.jpeg") no-repeat center center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Comic Sans MS', cursive;
+    }
+
+    .box {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        width: 300px;
+    }
+
+    h1 {
+        color: #ff4d6d;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .yes {
+        background: #ff4d6d;
+        color: white;
+    }
+
+    .no {
+        background: #ccc;
+        position: absolute;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Will you be my Valentine? 💘</h1>
+    <button class="yes" onclick="yesClick()">Yes 💖</button>
+    <button class="no" id="noBtn" onmouseover="moveNo()">No 😢</button>
+</div>
+
+<script>
+function yesClick() {
+    document.body.innerHTML = `
+        <div style="
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:
+              linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('WhatsApp Image 2026-02-07 at 11.40.24 AM.jpeg') center/cover no-repeat;
+            color:white;
+            font-family:Comic Sans MS;
+            text-align:center;">
+            <h1>Yayyy! 💕<br>You made my day 😍</h1>
+        </div>
+    `;
+}
+
+function moveNo() {
+    const btn = document.getElementById("noBtn");
+    btn.style.left = Math.random() * 80 + "vw";
+    btn.style.top = Math.random() * 80 + "vh";
+}
+</script>
+
+</body>
+</html>
