@@ -83,12 +83,15 @@ function yesClick() {
 }
 
     function yesClick() {
-    const phoneNumber = "9715XXXXXXXX"; // 👉 PUT YOUR NUMBER WITH COUNTRY CODE
-    const message = "She said YES ❤️💘";
-    const url = "https://wa.me/" + 971509088041 + "?text=" + encodeURIComponent(message);
+    const email = "fajaschonad@gmail.com"; // 👉 PUT YOUR EMAIL ADDRESS HERE
+    const subject = "She said YES! ❤️";
+    const body = "I have some great news... she said yes! 💘";
+    
+    const url = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     window.location.href = url;
 }
 
+  
     
 function moveNo() {
     const btn = document.getElementById("noBtn");
@@ -99,5 +102,6 @@ function moveNo() {
 
 </body>
 </html>
+
 
 
